@@ -57,14 +57,18 @@ document.querySelectorAll('.js-add-to-cart').forEach((button) => {
         const item = cart.find((item) => item.id === productId);
         if (item) {
             item.quantity += 1;
-            return;
         } else {
             cart.push({
                 id: productId,
                 quantity: 1
             });
-            return;
         }
+        let cartQuantity = 0;
+        cart.forEach(item => {
+            cartQuantity += item.quantity;
+        });
 
+        document.querySelector('.js-cart-quantity').innerHTML = cartQuantity;
     });
 });
+
