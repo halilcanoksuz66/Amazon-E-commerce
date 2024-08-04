@@ -25,5 +25,6 @@ export function removeFromCart(productId) {
     const item = cart.find((cartItem) => cartItem.id === productId);
     if (item) {
         cart.splice(cart.indexOf(item), 1);
+        console.log(cart);
     }
 }
