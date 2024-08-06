@@ -1,4 +1,4 @@
-export let cart = JSON.parse(localStorage.getItem("cart"))
+export let cart = JSON.parse(localStorage.getItem("cart"));
 
 
 if (!cart) {
@@ -50,4 +50,13 @@ export function calculateCartQuantity() {
     });
 
     return cartQuantity;
+}
+
+export function updateQuantity(productId, quantity) {
+    const item = cart.find((cartItem) => cartItem.id === productId);
+    if (item) {
+        item.quantity = quantity;
+    }
+
+    saveToStorage();
 }
