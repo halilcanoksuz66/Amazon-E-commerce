@@ -63,3 +63,9 @@ export function updateQuantity(productId, quantity) {
 
     saveToStorage();
 }
+
+export function updateDeliveryOption(productId, deliveryOptionId) {
+    let item = cart.find((cartItem) => cartItem.id === productId);
+    item.deliveryOptionId = deliveryOptionId;
+    saveToStorage();
+}
