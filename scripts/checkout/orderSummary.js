@@ -92,7 +92,7 @@ export function renderOrderSummary() {
     });
 
     document.querySelectorAll('.js-delivery-option').forEach((option) => {
-        option.addEventListener('click', () => {
+        option.addEventListener('click', () => { 
             const { productId, deliveryOptionId } = option.dataset;
             updateDeliveryOption(productId, deliveryOptionId);
             renderOrderSummary();
