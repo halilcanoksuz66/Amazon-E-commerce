@@ -23,7 +23,6 @@ export function getDeliveryOption(deliveryOptionId) {
 export function calculateDeliveryDate(deliveryOption) {
     let today = dayjs();
     let deliveryDateCount = deliveryOption.deliveryDays;
-    console.log(deliveryDateCount);
 
     while (deliveryDateCount > 0) {
         today = today.add(1, 'day');
