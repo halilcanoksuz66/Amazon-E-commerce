@@ -2,11 +2,10 @@ import { cart, addToCart } from "../../data/cart.js";
 
 describe('test suite : addToCart', () => {
     beforeEach(() => {
-        const input = document.createElement('input');
-        input.className = 'js-quantity-selector-e43638ce-6aa0-4b85-b27f-e1d07eb678c6';
-        input.value = '1';
-        document.body.appendChild(input);
+        cart.length = 0;
         spyOn(localStorage, 'setItem');
+        document.body.innerHTML += `
+        <input class="js-quantity-selector-e43638ce-6aa0-4b85-b27f-e1d07eb678c6" value="1">`
     });
 
 
@@ -17,8 +16,11 @@ describe('test suite : addToCart', () => {
             deliveryOptionId: '1'
         }]));
 
-        cart.length = 1;
-
+        cart.push({
+            id: 'e43638ce-6aa0-4b85-b27f-e1d07eb678c6',
+            quantity: 1,
+            deliveryOptionId: '1'
+        });
 
         addToCart('e43638ce-6aa0-4b85-b27f-e1d07eb678c6');
 
@@ -28,12 +30,11 @@ describe('test suite : addToCart', () => {
         expect(cart[0].quantity).toBe(2);
     });
 
+
     it('adds a new product to the cart', () => {
         spyOn(localStorage, 'getItem').and.callFake(() => JSON.stringify([]));
-        cart.length = 0;
 
 
-        console.log(localStorage.getItem('cart'));
         addToCart('e43638ce-6aa0-4b85-b27f-e1d07eb678c6');
 
         expect(cart.length).toBe(1);
