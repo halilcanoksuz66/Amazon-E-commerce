@@ -57,14 +57,9 @@ function Cart(localStorageKey) {
             this.saveToStorage();
         },
         updateDeliveryOption: function (productId, deliveryOptionId) {
-            const deliveryOption = getDeliveryOption(deliveryOptionId)
-            if (deliveryOption) {
-                let item = this.cartItems.find((cartItem) => cartItem.id === productId);
-                if (item) {
-                    item.deliveryOptionId = deliveryOptionId;
-                    this.saveToStorage();
-                }
-            }
+            let matchingItem = this.cartItems.find((cartItem) => cartItem.id === productId);
+            matchingItem.id = deliveryOptionId;
+            this.saveToStorage();
         }
     }
 
@@ -74,7 +69,6 @@ function Cart(localStorageKey) {
 
 const cart = Cart('cart');
 const businessCart = Cart('businessCart');
-
 
 
 
