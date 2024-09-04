@@ -1,4 +1,4 @@
-import { cart } from "../../data/cart.js";
+import { cart } from "../../data/cart-class.js";
 import { renderOrderSummary } from "../../scripts/checkout/orderSummary.js";
 
 describe('test suite : renderOrderSummary', () => {
@@ -6,8 +6,7 @@ describe('test suite : renderOrderSummary', () => {
     beforeEach(() => {
 
         spyOn(localStorage, 'setItem');
-        cart.length = 0;
-        cart.push(
+        cart.cartItems = [
             {
                 id: "e43638ce-6aa0-4b85-b27f-e1d07eb678c6",
                 quantity: 2,
@@ -18,9 +17,9 @@ describe('test suite : renderOrderSummary', () => {
                 quantity: 1,
                 deliveryOptionId: 2
             }
-        );
+        ];
 
-        spyOn(localStorage, 'getItem').and.callFake(() => JSON.stringify(cart));
+        spyOn(localStorage, 'getItem').and.callFake(() => JSON.stringify(cart.cartItems));
     });
 
     afterEach(() => {
@@ -60,8 +59,8 @@ describe('test suite : renderOrderSummary', () => {
         expect(document.querySelectorAll('.cart-item-container').length).toEqual(1);
         expect(document.querySelector(`.js-cart-item-container-${product1}`)).toEqual(null);
         expect(document.querySelector(`.js-cart-item-container-${product2}`)).not.toEqual(null);
-        expect(cart.length).toEqual(1);
-        expect(cart[0].id).toEqual(product2);
+        expect(cart.cartItems.length).toEqual(1);
+        expect(cart.cartItems[0].id).toEqual(product2);
     })
 
     it('updating the delivery option', () => {
@@ -71,8 +70,8 @@ describe('test suite : renderOrderSummary', () => {
         specificDiv.querySelector('.delivery-option-input').click();
         const input = specificDiv.querySelector('.delivery-option-input');
         expect(input.checked).toBe(true);
-        expect(cart.length).toEqual(2);
-        expect(cart[0].deliveryOptionId).toEqual('3');
+        expect(cart.cartItems.length).toEqual(2);
+        expect(cart.cartItems[0].deliveryOptionId).toEqual('3');
 
         const shippingPriceCents = document.querySelector('.js-payment-shipping-price').innerText;
         const totalPriceCents = document.querySelector('.js-payment-total-price').innerText;
