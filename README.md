@@ -2,6 +2,18 @@
 
 Bu proje, Amazon'un temel işlevselliğini taklit eden bir e-ticaret platformu klonudur. Kullanıcılar ürünleri görüntüleyebilir, sepete ekleyebilir ve ödeme işlemlerini tamamlayabilir.
 
+## 📸 Ekran Görüntüleri
+
+### Ana Sayfa
+![Ana Sayfa](screenshots/image1.png)
+
+### Sepet Sayfası
+![Sepet Sayfası](screenshots/image2.png)
+
+### Sipariş Takip Sayfası
+![Sipariş Takip](screenshots/image3.png)
+
+
 ## 🚀 Proje Özellikleri
 
 - **Ürün Listeleme:** Ürünlerin resim, fiyat ve açıklamalarıyla birlikte gösterilmesi.
