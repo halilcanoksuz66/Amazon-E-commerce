@@ -5,13 +5,13 @@ Bu proje, Amazon'un temel işlevselliğini taklit eden bir e-ticaret platformu k
 ## 📸 Ekran Görüntüleri
 
 ### Ana Sayfa
-![Ana Sayfa](screenshots/image1.png)
+![Ana Sayfa](screenshots/İmage1.png)
 
 ### Sepet Sayfası
-![Sepet Sayfası](screenshots/image2.png)
+![Sepet Sayfası](screenshots/İmage2.png)
 
 ### Sipariş Takip Sayfası
-![Sipariş Takip](screenshots/image3.png)
+![Sipariş Takip](screenshots/İmage3.png)
 
 
 ## 🚀 Proje Özellikleri
