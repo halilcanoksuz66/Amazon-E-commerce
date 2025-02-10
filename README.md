@@ -27,7 +27,7 @@ cd amazon-clone
 Tarayıcıda açmak için:
 
 ```sh
-index.html dosyasını tarayıcıda açın
+amazon.html dosyasını tarayıcıda açın
 ```
 
 ## 🌍 Canlı Demo
