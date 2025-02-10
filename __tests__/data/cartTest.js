@@ -11,7 +11,7 @@ describe('test suite : addToCart', () => {
 
     it('adds an existing product to the cart', () => {
         cart.cartItems.push({
-            id: 'e43638ce-6aa0-4b85-b27f-e1d07eb678c6',
+            productId: 'e43638ce-6aa0-4b85-b27f-e1d07eb678c6',
             quantity: 1,
             deliveryOptionId: 1
         });
@@ -21,11 +21,11 @@ describe('test suite : addToCart', () => {
         expect(cart.cartItems.length).toBe(1);
         expect(localStorage.setItem).toHaveBeenCalledTimes(1);
         expect(localStorage.setItem).toHaveBeenCalledWith('cart-oop', JSON.stringify([{
-            id: 'e43638ce-6aa0-4b85-b27f-e1d07eb678c6',
+            productId: 'e43638ce-6aa0-4b85-b27f-e1d07eb678c6',
             quantity: 2,
             deliveryOptionId: 1
         }]))
-        expect(cart.cartItems[0].id).toBe('e43638ce-6aa0-4b85-b27f-e1d07eb678c6');
+        expect(cart.cartItems[0].productId).toBe('e43638ce-6aa0-4b85-b27f-e1d07eb678c6');
         expect(cart.cartItems[0].quantity).toBe(2);
     });
 
@@ -36,11 +36,11 @@ describe('test suite : addToCart', () => {
         expect(cart.cartItems.length).toBe(1);
         expect(localStorage.setItem).toHaveBeenCalledTimes(1);
         expect(localStorage.setItem).toHaveBeenCalledWith('cart-oop', JSON.stringify([{
-            id: 'e43638ce-6aa0-4b85-b27f-e1d07eb678c6',
+            productId: 'e43638ce-6aa0-4b85-b27f-e1d07eb678c6',
             quantity: 1,
             deliveryOptionId: 1
         }]))
-        expect(cart.cartItems[0].id).toBe('e43638ce-6aa0-4b85-b27f-e1d07eb678c6');
+        expect(cart.cartItems[0].productId).toBe('e43638ce-6aa0-4b85-b27f-e1d07eb678c6');
         expect(cart.cartItems[0].quantity).toBe(1);
     });
 })
@@ -56,7 +56,7 @@ describe('test suite : removeFromCart', () => {
 
     it('remove a productId that is in the cart ', () => {
         cart.cartItems.push({
-            id: 'e43638ce-6aa0-4b85-b27f-e1d07eb678c6',
+            productId: 'e43638ce-6aa0-4b85-b27f-e1d07eb678c6',
             quantity: 1,
             deliveryOptionId: 1
         });

@@ -15,12 +15,12 @@ describe('test suite : renderOrderSummary', () => {
         spyOn(localStorage, 'setItem');
         cart.cartItems = [
             {
-                id: "e43638ce-6aa0-4b85-b27f-e1d07eb678c6",
+                productId: "e43638ce-6aa0-4b85-b27f-e1d07eb678c6",
                 quantity: 2,
                 deliveryOptionId: 1
             },
             {
-                id: "15b6fc6f-327a-4ec4-896f-486349e85a3d",
+                productId: "15b6fc6f-327a-4ec4-896f-486349e85a3d",
                 quantity: 1,
                 deliveryOptionId: 2
             }
@@ -67,7 +67,7 @@ describe('test suite : renderOrderSummary', () => {
         expect(document.querySelector(`.js-cart-item-container-${product1}`)).toEqual(null);
         expect(document.querySelector(`.js-cart-item-container-${product2}`)).not.toEqual(null);
         expect(cart.cartItems.length).toEqual(1);
-        expect(cart.cartItems[0].id).toEqual(product2);
+        expect(cart.cartItems[0].productId).toEqual(product2);
     })
 
     it('updating the delivery option', () => {
