@@ -6,13 +6,12 @@ Bu proje, Amazon'un temel işlevselliğini taklit eden bir e-ticaret platformu k
 
 - **Ürün Listeleme:** Ürünlerin resim, fiyat ve açıklamalarıyla birlikte gösterilmesi.
 - **Sepet Yönetimi:** Kullanıcıların ürünleri sepete ekleyip çıkarması.
-- **Sipariş Takibi:** Sipariş geçmişi ve takip sistemi.
+- **Sipariş Takibi:** Sipariş geçmişi.
 - **Responsive Tasarım:** Mobil ve masaüstü cihazlara uyumlu arayüz.
 
 ## 🛠 Kullanılan Teknolojiler
 
 - **Frontend:** HTML, CSS, JavaScript
-- **Stil Kütüphanesi:** Tailwind CSS (veya varsa ekstra kütüphaneler)
 - **Veri Yönetimi:** JSON tabanlı veri saklama
 - **Görseller:** PNG, JPG, WebP formatları
 
