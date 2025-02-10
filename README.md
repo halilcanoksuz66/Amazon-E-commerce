@@ -1,6 +1,6 @@
 # Amazon Clone
 
-Bu proje, Amazon'un temel işlevselliğini taklit eden bir e-ticaret platformu klonudur. Kullanıcılar ürünleri görüntüleyebilir, sepete ekleyebilir ve ödeme işlemlerini tamamlayabilir.
+Bu proje, Amazon'un temel işlevselliğini taklit eden bir e-ticaret platformu klonudur.
 
 ## 📸 Ekran Görüntüleri
 
