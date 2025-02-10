@@ -42,9 +42,6 @@ Tarayıcıda açmak için:
 amazon.html dosyasını tarayıcıda açın
 ```
 
-## 🌍 Canlı Demo
-
-[Amazon Clone Canlı Önizleme](https://amazon-clone-demo.vercel.app/)
 
 ## 📌 Yapılacaklar
 
