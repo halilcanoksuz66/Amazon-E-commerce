@@ -32,8 +32,8 @@ Bu proje, Amazon'un temel işlevselliğini taklit eden bir e-ticaret platformu k
 Proje kodlarını klonlayın:
 
 ```sh
-git clone https://github.com/kullaniciAdi/amazon-clone.git
-cd amazon-clone
+git clone https://github.com/halilcanoksuz66/Amazon-E-commerce.git
+cd Amazon-E-commerce
 ```
 
 Tarayıcıda açmak için:
